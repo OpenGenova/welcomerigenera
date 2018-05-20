@@ -14,6 +14,7 @@
     "package:win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --out=out --icon=assets/app-icon/win/app.ico",
 
     "package-linux": "electron-packager .  rigenera-app --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds",
+    "package-linux": "electron-packager .  rigenera-app --overwrite --asar=true --platform=linux --arch=ia32 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds",
 
     "package:sign-exe": "signcode './out/Electron API Demos-win32-ia32/Electron API Demos.exe' --cert ~/electron-api-demos.p12 --prompt --name 'Electron API Demos' --url 'http://electron.atom.io'",
     "package:installer": "node ./script/installer.js",

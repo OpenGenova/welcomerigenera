@@ -31,7 +31,7 @@
 
 .nav-title strong {
   font-weight: 600;
-  color: var(--color-strong);
+  color: #e52822;
 }
 
 .nav-header-icon {
@@ -83,7 +83,7 @@
   background-color: hsla(0,0%,0%,.1);
 }
 .nav-button.is-selected {
-  background-color: var(--color-accent);
+  background-color:#e52822;
 }
 .nav-button.is-selected,
 .nav-button.is-selected em {
