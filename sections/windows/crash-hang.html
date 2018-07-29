@@ -4,59 +4,78 @@
       <div class="section-wrapper">
         <h1>
           <svg class="section-icon"><use xlink:href="assets/img/icons.svg#icon-windows"></use></svg>
-          Handling Window Crashes and Hangs
+          Da dove cominciare per usare il sistema
         </h1>
-        <h3>The <code>BrowserWindow</code> module will emit events when the renderer process crashes or hangs. You can listen for these events and give users the chance to reload, wait or close that window.</h3>
+        <h3>Il sistema operativo di Rigenera Digitale se dotato di <code>connessione internet</code> è in grado di funzionare da subito.</h3>
 
-        <p>Open the <a href="http://electron.atom.io/docs/api/browser-window">full API documentation<span class="u-visible-to-screen-reader">(opens in new window)</span></a> in your browser.</p>
+        <p>Di seguito indichiamo una selezione delle principali nozioni utili per iniziare subito a muoversi all'interno delle applicazioni.</p>
       </div>
     </header>
 
     <div class="demo">
       <div class="demo-wrapper">
-        <button id="new-window-crashes-demo-toggle" class="js-container-target demo-toggle-button">Relaunch window after the process crashes
-          <div class="demo-meta u-avoid-clicks">Supports: Win, macOS, Linux <span class="demo-meta-divider">|</span> Process: Main</div>
+        <button id="new-window-crashes-demo-toggle" class="js-container-target demo-toggle-button">Navigare su Internet
+          <div class="demo-meta u-avoid-clicks">Apri questo menu per vedere la guida</div>
         </button>
         <div class="demo-box">
-          <div class="demo-controls">
-            <button class="demo-button" id="process-crash">View Demo</button>
-          </div>
-          <p>In this demo we create a new window (via the <code>remote</code> module) and provide a link that will force a crash using <code>process.crash()</code>.</p>
-          <p>The window is listening for the crash event and when the event occurs it prompts the user with two options: reload or close.</p>
-
-          <h5>Renderer Process</h5>
-          <pre><code data-path="renderer-process/windows/process-crash.js"></code></pre>
+          <p>Per navigare su Internet occorre usare un'applicazione che si chiama Browser. <br/>Su Rigenera Digitale
+          il più usato è <a href="https://www.mozilla.org/it/firefox/" aria-label="Open Genova">Firefox</a>. Facendo click sull'icona che si trova nel Menu Principale parte l'applicazione.</p>
+            <p><center><img src="assets/img/firefox.png" alt="firefox"></center></p>
+            <p>A questo punto è possibile digitare l'indirizzo del sito sulla barra orizzontale oppure effettuare una ricerca
+            "per parola chiave" sul browser a disposizione.</p>
+              <p><center><img src="assets/img/browser.png" alt="firefox"></center></p>
         </div>
       </div>
     </div>
 
     <div class="demo">
       <div class="demo-wrapper">
-        <button id="new-window-hangs-demo-toggle" class="js-container-target demo-toggle-button">Relaunch window after the process hangs
-          <div class="demo-meta u-avoid-clicks">Supports: Win, macOS, Linux <span class="demo-meta-divider">|</span> Process: Main</div>
+        <button id="new-window-hangs-demo-toggle" class="js-container-target demo-toggle-button">Scrivere documenti
+          <div class="demo-meta u-avoid-clicks">Apri questo menu per vedere la guida</div>
         </button>
         <div class="demo-box">
-          <div class="demo-controls">
-            <button class="demo-button" id="process-hang">View Demo</button>
-          </div>
-          <p>In this demo we create a new window (via the <code>remote</code> module) and provide a link that will force the process to hang using <code>process.hang()</code>.</p>
-          <p>The window is listening for the process to become officially unresponsive (this can take up to 30 seconds). When this event occurs it prompts the user with two options: reload or close.</p>
-
-          <h5>Renderer Process</h5>
-          <pre><code data-path="renderer-process/windows/process-hang.js"></code></pre>
-
-          <div class="demo-protip">
-            <h2>ProTip</h2>
-            <strong>Wait for the process to become responsive again.</strong>
-            <p>A third option in the case of a process that is hanging is to wait and see if the problem resolves, allowing the process to become responsive again. To do this, use the <code>BrowserWindow</code> event 'responsive' as shown below.</p>
-            <pre><code class="language-js">win.on('responsive', function () {
-  // Do something when the window is responsive again
-})</code></pre>
-          </div>
+          <p>Per scrivere documenti, fare calcoli o preparare presentazioni occorre usare un'applicazione che si chiama
+            <a href="https://it.libreoffice.org" aria-label="Libre Office">Libre Office</a>.
+            Facendo click sull'icona Writer che si trova nel Menu Principale parte l'applicazione per scrivere documenti.</p>
+            <p><center><img src="assets/img/word.png" alt="Word"></center></p>
+            <p>Dopo l'avvio dell'applicazione sarà possibile scrivere titoli e testo formattandolo nella maniera opportuna, salvare il lavoro fatto oppure stamparlo.</p>
+              <p><center><img src="assets/img/documento.png" alt="firefox"></center></p>
+        </div>
         </div>
       </div>
     </div>
 
+    <div class="demo">
+      <div class="demo-wrapper">
+        <button id="new-window-crashes-demo-toggle" class="js-container-target demo-toggle-button">Gestire la posta elettronica
+          <div class="demo-meta u-avoid-clicks">Apri questo menu per vedere la guida</div>
+        </button>
+        <div class="demo-box">
+          <p>Per leggere la posta elettronica dal proprio Computer è necessaria una applicazione specifica chiamata client di posta.
+            Rigenera Digitale usa un client che si chiama <a href="https://support.mozilla.org/it/products/thunderbird/emails-thunderbird" aria-label="Thunderbird">Thunderbird</a> e che
+            necessita di essere configurato con le impostazioni della propria casella di posta elettronica. <a href="https://www.fastweb.it/web-e-digital/come-attivare-un-account-email-sui-principali-siti-gratuiti-di-posta-elettronica/" aria-label="posta">Non hai una casella di posta?</a></p>
+            <p><center><img src="assets/img/mail.png" alt="firefox"></center></p>
+            <p>Una volta configurata la casella di posta elettronica ti sarà possibile ricevere ed inviare mail direttamente dal tuo Computer in sicurezza e semplicità.</p>
+              <p><center><img src="assets/img/thunderbird.png" alt="firefox"></center></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo">
+      <div class="demo-wrapper">
+        <button id="new-window-crashes-demo-toggle" class="js-container-target demo-toggle-button">Uno sguardo al Centro di Controllo
+          <div class="demo-meta u-avoid-clicks">Apri questo menu per vedere la guida</div>
+        </button>
+        <div class="demo-box">
+          <p>Il Centro di Controllo si raggiunge dall'area Sistema del Menu principale ed apre un applicazione che gestisce tutti gli elementi principali del tuo sistema
+          come per esempio la stampante, la grafica, le impostazione del tuo utente e molto altro.</p>
+            <p><center><img src="assets/img/centro.png" alt="firefox"></center></p>
+            <p>L'utente "novello" non deve per forza saper usare questa applicazione, ma deve certamente conoscerne l'esistenza.
+              Suggeriamo di aprire il Centro di Controllo e navigare al suo interno a scopo didattico.</p>
+              <p><center><img src="assets/img/impostazioni.png" alt="firefox"></center></p>
+        </div>
+      </div>
+    </div>
 
 
     <script type="text/javascript">

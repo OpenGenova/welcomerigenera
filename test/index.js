@@ -12,7 +12,7 @@ chai.use(chaiAsPromised)
 
 const timeout = process.env.CI ? 30000 : 10000
 
-describe('demo app', function () {
+describe('Welcome Rigenera', function () {
   this.timeout(timeout)
 
   let app
@@ -64,7 +64,7 @@ describe('demo app', function () {
       .browserWindow.isFocused().should.eventually.be.true
       .browserWindow.getBounds().should.eventually.have.property('width').and.be.above(0)
       .browserWindow.getBounds().should.eventually.have.property('height').and.be.above(0)
-      .browserWindow.getTitle().should.eventually.equal('Electron API Demos')
+      .browserWindow.getTitle().should.eventually.equal('Welcome Rigenera')
       .waitForVisible('#about-modal').should.eventually.be.true
       .isVisible('.js-nav').should.eventually.be.false
       .click('button[id="get-started"]').pause(500)
@@ -77,25 +77,6 @@ describe('demo app', function () {
       return app.client.dismissAboutPage()
         .selectSection('windows')
         .isExisting('button.is-selected[data-section="windows"]').should.eventually.be.true
-        .isVisible('#pdf-section').should.eventually.be.false
-        .selectSection('pdf')
-        .isVisible('#windows-section').should.eventually.be.false
-        .isExisting('button.is-selected[data-section="windows"]').should.eventually.be.false
-        .isExisting('button.is-selected[data-section="pdf"]').should.eventually.be.true
-    })
-  })
-
-  describe('when a demo title is clicked', function () {
-    it('it expands the demo content', function () {
-      let onlyFirstVisible = Array(30).fill(false)
-      onlyFirstVisible[0] = true
-
-      return app.client.dismissAboutPage()
-        .collapseDemos()
-        .selectSection('windows')
-        .click('.js-container-target')
-        .waitForVisible('.demo-box')
-        .isVisible('.demo-box').should.eventually.deep.equal(onlyFirstVisible)
     })
   })
 
@@ -108,27 +89,14 @@ describe('demo app', function () {
         .then(restartApp)
         .then(function () {
           return app.client.waitForVisible('#windows-section')
-            .isVisible('#windows-section').should.eventually.be.true
-            .isVisible('.demo-box').should.eventually.deep.equal(onlyFirstVisible)
         })
     })
   })
 
   it('does not contain any accessibility warnings or errors', function () {
     return app.client.dismissAboutPage()
+      .auditSectionAccessibility('app')
       .auditSectionAccessibility('windows')
       .auditSectionAccessibility('crash-hang')
-      .auditSectionAccessibility('menus')
-      .auditSectionAccessibility('shortcuts')
-      .auditSectionAccessibility('ex-links-file-manager')
-      .auditSectionAccessibility('notifications')
-      .auditSectionAccessibility('dialogs')
-      .auditSectionAccessibility('tray')
-      .auditSectionAccessibility('ipc')
-      .auditSectionAccessibility('app-sys-information')
-      .auditSectionAccessibility('clipboard')
-      .auditSectionAccessibility('protocol')
-      .auditSectionAccessibility('pdf')
-      .auditSectionAccessibility('desktop-capturer')
   })
 })

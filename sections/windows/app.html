@@ -1,0 +1,55 @@
+<template class="task-template">
+  <section id="app-section" class="section js-section u-category-windows">
+    <header class="section-header">
+      <div class="section-wrapper">
+        <h1>
+          <svg class="section-icon"><use xlink:href="assets/img/icons.svg#icon-windows"></use></svg>
+          Applicazioni sviluppate per Rigenera Digitale
+        </h1>
+        <h3>Rigenera Digitale è personalizzato con <code>Applicazioni Territoriali</code>, lo scopo è di aggiungere valore all'utilizzo del sistema.</h3>
+
+        <p>Fai click sul titolo per aprire la guida relativa.</p>
+
+      </div>
+    </header>
+
+    <div class="demo">
+      <div class="demo-wrapper">
+        <button id="new-window-demo-toggle" class="js-container-target demo-toggle-button">Video Babboleo
+          <div class="demo-meta u-avoid-clicks">Apri questo menu per vedere la guida</div>
+        </button>
+        <div class="demo-box">
+
+          <p>Per ricevere notifiche pop-up sul desktop quando vengono pubblicati <code>Video Babboleo</code>
+            ti basterà selezionale l'opzione nel pannello di controllo.
+          <p>Ad ogni nuova pubblicazione ti verrà notificato con un messaggio cliccabile che ti porterà direttamente al video in oggetto.</p>
+          <p><img src="assets/img/app-babboleo.png" alt="Menu Applicazione"></p>
+          <p>Clicca sull'icona per aprile l'applicazione.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo">
+      <div class="demo-wrapper">
+        <button id="manage-window-demo-toggle" class="js-container-target demo-toggle-button">Notifiche Comune di Genova
+          <div class="demo-meta u-avoid-clicks">Apri questo menu per vedere la guida</div>
+        </button>
+        <div class="demo-box">
+           <p>Con lo stesso principio dei Video Babboleo sono gestite le notifiche dal sito del Comune di Genova.</p>
+           <p>In questo caso per evitare di ricevere troppe notifiche è possibile effettuare
+           una selezione dei messaggi che si desidera ricevere.</p>
+           <p><img src="assets/img/app-comune.png" alt="Menu Applicazione"></p>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      require('./renderer-process/windows/create-window')
+      require('./renderer-process/windows/manage-window')
+      require('./renderer-process/windows/using-window-events')
+      require('./renderer-process/windows/frameless-window')
+    </script>
+
+  </section>
+</template>
