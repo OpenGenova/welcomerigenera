@@ -1,11 +1,9 @@
 
 # welcomerigenera
 
-BETA finestra di Benvenuto per Rigenera Digitale 18.04 LTS
+Finestra di Benvenuto per Rigenera Digitale 18.04 LTS
 
 In questo repo sono contenuti i sorgenti di Welcome Rigenera
-
-Dentro alla cartella /build-app si trova il .deb che installa l'app
 
 <h2>Per cominciare</h2>
 
@@ -51,9 +49,9 @@ lancia una batteria di test automatici demo ma funzionante. <br/>
 
 <h2>Creazione del pacchetto .deb</h2>
 
-Modifica nel file _package.json_ la chiave *version* per cambiare la versione dei pacchetti.
-Vai nella cartella build-app/ e cancella i pacchetti _.deb_ presenti. 
-Torna nella root del repository e a seconda dell'architettura scelta lancia i comandi seguenti.
+Modifica nel file _package.json_ la chiave *version* per cambiare la versione dei pacchetti.<br>
+Vai nella cartella build-app/ e cancella i pacchetti _.deb_ presenti.<br>
+Torna nella root del repository e a seconda dell'architettura scelta lancia i comandi seguenti.<br>
 
 <b>Release a 32 bit</b>
 ```
