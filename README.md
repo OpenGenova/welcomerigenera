@@ -58,8 +58,8 @@ Vai nella cartella welcomerigenera/build-app/ e cancella i pacchetti .deb presen
 Torna nella root del repo e lancia i seguenti comandi:<br/>
 
 <code>
-electron-installer-debian --src release-builds/rigenera-app-linux-x64/ --arch amd64 --config debian.json <br/>
-electron-installer-debian --src release-builds/rigenera-app-linux-ia32/ --arch i386 --config debian.json<br/>
-</code>
+electron-installer-debian --src release-builds/rigenera-app-linux-x64/ --arch amd64 --config debian.json
+electron-installer-debian --src release-builds/rigenera-app-linux-ia32/ --arch i386 --config debian.json
+</code><br/>
 
 <p>A questo punto torna nella cartella welcomerigenera/build-app/ e verifica che sono stati richeati i pacchetti per l'architettura a 32-64 bit. I file installabili contengono tutte le modifiche applicate in locale all'applicazione.</p>
